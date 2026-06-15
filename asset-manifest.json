@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/larkana-gym-showcase/static/css/main.55f30213.css",
+    "main.js": "/larkana-gym-showcase/static/js/main.b145b005.js",
+    "static/js/453.b552ef67.chunk.js": "/larkana-gym-showcase/static/js/453.b552ef67.chunk.js",
+    "index.html": "/larkana-gym-showcase/index.html",
+    "main.55f30213.css.map": "/larkana-gym-showcase/static/css/main.55f30213.css.map",
+    "main.b145b005.js.map": "/larkana-gym-showcase/static/js/main.b145b005.js.map",
+    "453.b552ef67.chunk.js.map": "/larkana-gym-showcase/static/js/453.b552ef67.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.55f30213.css",
+    "static/js/main.b145b005.js"
+  ]
+}
