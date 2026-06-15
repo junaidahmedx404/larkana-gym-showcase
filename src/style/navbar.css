@@ -1,0 +1,133 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background-color: rgba(10, 10, 10, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border-color);
+  z-index: 1000;
+}
+
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.nav-logo {
+  font-size: 1.5rem;
+  font-weight: 900;
+  letter-spacing: -0.5px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 2.5rem;
+}
+
+.nav-links a {
+  color: var(--text-main);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: var(--primary);
+}
+
+/* Call to Action Button */
+.btn-nav-cta {
+  background-color: var(--primary);
+  color: var(--text-dark) !important;
+  padding: 0.6rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 700 !important;
+  transition: opacity 0.2s ease;
+}
+
+.btn-nav-cta:hover {
+  opacity: 0.9;
+}
+
+.nav-cta-mobile {
+  display: none;
+}
+
+/* Responsive Hamburger Menu Styles */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 18px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.hamburger-bar {
+  width: 100%;
+  height: 2px;
+  background-color: var(--text-main);
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: flex;
+  }
+
+  /* Hamburger to 'X' animation states */
+  .nav-toggle.open .hamburger-bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .nav-toggle.open .hamburger-bar:nth-child(2) {
+    opacity: 0;
+  }
+  .nav-toggle.open .hamburger-bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+    background-color: var(--secondary);
+    flex-direction: column;
+    justify-content: center;
+    gap: 3rem;
+    transition: right 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    border-left: 1px solid var(--border-color);
+  }
+
+  .nav-links.nav-active {
+    right: 0;
+  }
+
+  .nav-cta-desktop {
+    display: none;
+  }
+
+  .nav-cta-mobile {
+    display: block;
+    width: 80%;
+    text-align: center;
+  }
+
+  .nav-cta-mobile .btn-nav-cta {
+    display: block;
+    width: 100%;
+  }
+}

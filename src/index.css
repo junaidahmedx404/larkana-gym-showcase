@@ -1,13 +1,55 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* ==========================================
+   WEBNAID DESIGN SYSTEM: LARKANA GYM
+   ========================================== */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* Prevents the sticky navbar from covering section titles */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+  /* Core Palette */
+  --primary: #e2fe00; /* Neon Lime/Yellow (Energy & Action) */
+  --primary-hover: #cbe300;
+  --secondary: #16161a; /* Dark Card Background */
+  --bg-main: #0a0a0a; /* True Dark Mode Background */
+
+  /* Text Colors */
+  --text-main: #ffffff; /* High contrast readability */
+  --text-muted: #a3a3a3; /* Secondary descriptions */
+  --text-dark: #0a0a0a; /* For text inside primary colored elements */
+
+  /* System Accents */
+  --accent-red: #ff3b30; /* For alerts, live tags, or intense highlights */
+  --border-color: rgba(255, 255, 255, 0.1);
+
+  /* Fonts */
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+}
+
+/* Global Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Reusable Utility Classes */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.text-highlight {
+  color: var(--primary);
 }
